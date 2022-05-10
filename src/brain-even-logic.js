@@ -14,8 +14,8 @@ const brainEvenGame = () => {
     const isEven = RandomInt % 2 === 0;
     console.log(`Question: ${RandomInt}`);
     const userInput = readlineSync.question('Your answer ', {
-    limit: ['yes', 'no',],
-    limitMessage: `${userName}, answer "yes" or "no", please.`
+      limit: ['yes', 'no'],
+      limitMessage: `${userName}, answer "yes" or "no", please.`,
     });
     const isYes = (userInput === 'yes' || userInput === 'Yes');
     const isNo = (userInput === 'no' || userInput === 'No');
@@ -34,7 +34,6 @@ const brainEvenGame = () => {
       isCorrect = true;
       correctAnswerCount += 1;
     }
-
   } while (isCorrect && correctAnswerCount < 3);
 
   if (correctAnswerCount === 3) {
@@ -42,4 +41,4 @@ const brainEvenGame = () => {
   }
 };
 
-export { brainEvenGame };
+export default brainEvenGame;
