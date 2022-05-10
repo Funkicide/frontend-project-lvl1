@@ -20,7 +20,7 @@ const brainCalcGame = () => {
     const randomOperator = getRandomOperator();
     const expression = `${randomInt1} ${randomOperator} ${randomInt2}`;
     console.log(`Question: ${expression}`);
-    const userInput = readlineSync.question('Your answer ');
+    const userInput = readlineSync.questionInt('Your answer ');
     const isRight = (eval(userInput) === eval(expression));
     if (isRight) {
       console.log('Correct!');
