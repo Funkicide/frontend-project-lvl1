@@ -26,9 +26,9 @@ const brainCalcGame = () => {
     const expression = `${randomInt1} ${randomOperator} ${randomInt2}`;
     const expValue = getValue();
     console.log(`Question: ${expression}`);
-    const userInput = readlineSync.questionInt('Your answer ');
-    const isRight = (userInput === expValue);
-    if (isRight) {
+    const userInput = readlineSync.questionInt('Your answer: ');
+    const isCorrectAnswer = (userInput === expValue);
+    if (isCorrectAnswer) {
       console.log('Correct!');
       isCorrect = true;
       correctAnswerCount += 1;

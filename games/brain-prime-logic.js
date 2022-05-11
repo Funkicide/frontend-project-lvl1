@@ -30,9 +30,9 @@ const brainPrimeGame = () => {
       limitMessage: `${userName}, answer "yes" or "no", please.`,
     });
     const isYes = (userInput === 'yes' || userInput === 'Yes');
+    const isCorrectAnswer = (isYes === isPrime(randomInt));
     const rightAnswer = (isPrime(randomInt) ? 'yes' : 'no');
-    const isRight = (isYes === isPrime(randomInt));
-    if (isRight) {
+    if (isCorrectAnswer) {
       console.log('Correct!');
       isCorrect = true;
       correctAnswerCount += 1;

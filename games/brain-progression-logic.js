@@ -49,8 +49,8 @@ const brainProgressionGame = () => {
     console.log(`Question: ${hideRandomElement(randomProgression)}`);
     const userInput = readlineSync.questionInt('Your answer ');
     const rightAnswer = (randomProgression[randomIndex]);
-    const isRight = (userInput === rightAnswer);
-    if (isRight) {
+    const isCorrectAnswer = (userInput === rightAnswer);
+    if (isCorrectAnswer) {
       console.log('Correct!');
       isCorrect = true;
       correctAnswerCount += 1;
