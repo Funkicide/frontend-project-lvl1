@@ -10,19 +10,11 @@ const greetUser = () => {
 };
 
 const getGcd = (a, b) => {
-  if (a === 0) {
-    return b;
+  if (!b) {
+    return a;
   }
 
-  while (b !== 0) {
-    if (a > b) {
-      a -= b;
-    } else {
-      b -= a;
-    }
-  }
-
-  return a;
+  return getGcd(b, a % b);
 };
 
 const getRandomInt = () => Math.round(Math.random() * (20 - 0) + 0);

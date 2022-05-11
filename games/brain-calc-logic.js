@@ -1,33 +1,39 @@
 import readlineSync from 'readline-sync';
+import greetUser, { getRandomOperator, getRandomInt } from '../src/index.js';
 
 const brainCalcGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  const userName = greetUser();
   console.log('What is the result of the expression?');
 
   let isCorrect = false;
   let correctAnswerCount = 0;
 
   do {
-    const randomInt1 = Math.round(Math.random() * (20 - 0) + 0);
-    const randomInt2 = Math.round(Math.random() * (20 - 0) + 0);
-    const getRandomOperator = () => {
-      const randomInt = Math.round(Math.random() * (2 - 0) + 0);
-      const operators = ['+', '-', '*'];
-      return operators[randomInt];
-    };
+    const randomInt1 = getRandomInt();
+    const randomInt2 = getRandomInt();
     const randomOperator = getRandomOperator();
+    const getValue = () => {
+      switch (randomOperator) {
+        case '+':
+          return randomInt1 + randomInt2;
+        case '-':
+          return randomInt1 - randomInt2;
+        default:
+          return randomInt1 * randomInt2;
+      }
+    };
+
     const expression = `${randomInt1} ${randomOperator} ${randomInt2}`;
+    const expValue = getValue();
     console.log(`Question: ${expression}`);
     const userInput = readlineSync.questionInt('Your answer ');
-    const isRight = (eval(userInput) === eval(expression));
+    const isRight = (userInput === expValue);
     if (isRight) {
       console.log('Correct!');
       isCorrect = true;
       correctAnswerCount += 1;
     } else {
-      console.log(`${userInput} is wrong answer ;(. Correct answer was ${eval(expression)}.`);
+      console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${expValue}'.`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
