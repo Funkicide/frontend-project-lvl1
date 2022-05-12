@@ -9,14 +9,6 @@ const greetUser = () => {
   return userName;
 };
 
-const getGcd = (a, b) => {
-  if (!b) {
-    return a;
-  }
-
-  return getGcd(b, a % b);
-};
-
 const getRandomInt = () => Math.round(Math.random() * (20 - 0) + 0);
 
 const getRandomOperator = () => {
@@ -26,6 +18,6 @@ const getRandomOperator = () => {
 };
 
 export {
-  getGcd, getRandomInt, getUserName, getRandomOperator,
+  getRandomInt, getUserName, getRandomOperator,
 };
 export default greetUser;

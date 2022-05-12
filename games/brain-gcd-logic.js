@@ -1,9 +1,17 @@
 import readlineSync from 'readline-sync';
-import greetUser, { getGcd, getRandomInt } from '../src/index.js';
+import greetUser, { getRandomInt } from '../src/index.js';
 
 const brainGcdGame = () => {
   const userName = greetUser();
   console.log('Find the greatest common divisor of given numbers.');
+
+  const getGcd = (a, b) => {
+    if (!b) {
+      return a;
+    }
+
+    return getGcd(b, a % b);
+  };
 
   let isCorrect = false;
   let correctAnswerCount = 0;
