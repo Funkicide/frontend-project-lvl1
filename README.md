@@ -4,7 +4,13 @@
 ![Lint-check](https://github.com/Funkicide/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
 
 # Brain games app
-App consists of five logic based console games: Brain Even, Brain Calc, Brain Gcd, Brain Progression, Brain Prime.
+App consists of five logic based console games:
+
+* Brain Even
+* Brain Calc
+* Brain Gcd
+* Brain Progression
+* Brain Prime
 
 ## System requirements
 
