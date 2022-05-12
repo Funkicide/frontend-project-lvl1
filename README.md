@@ -1,3 +1,8 @@
+### Codeclimate Maintainability badge:
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+### Linter check status:
+![Lint-check](https://github.com/Funkicide/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
+
 # Brain games app
 App consists of five logic based console games: Brain Even, Brain Calc, Brain Gcd, Brain Progression, Brain Prime.
 
@@ -23,8 +28,6 @@ make brain-progression
 make brain-prime
 ```
 
-### Linter check status:
-![example workflow](https://github.com/Funkicide/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
 ### Brain-even game demo: 
 https://asciinema.org/a/IlqsoCzlCP8DZOn17UyVfgQsE
 ### Brain-calc game demo:
@@ -37,5 +40,3 @@ https://asciinema.org/a/8VtDSAG9kzqpXjaFEVu87BjEG
 https://asciinema.org/a/epvabOwADpBXB3cHmo4jhX1Bm
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Funkicide/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Funkicide/frontend-project-lvl1/actions)
-### Codeclimate Maintainability badge:
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
