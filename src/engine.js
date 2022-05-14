@@ -11,7 +11,7 @@ const engine = (gameTask, game) => {
 
   do {
     const [gameQuestion, rightAnswer] = game();
-    console.log('Question: ', gameQuestion);
+    console.log(`Question: ${gameQuestion}`);
     const userInput = readlineSync.question('Your answer: ');
 
     if (rightAnswer === userInput) {
