@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import brainGcdGame from '../src/games/brain-gcd-logic.js';
+import { gameTask, runBrainGcd } from '../src/games/brain-gcd-logic.js';
+import engine from '../src/engine.js';
 
-brainGcdGame();
+engine(gameTask, runBrainGcd);

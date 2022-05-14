@@ -1,47 +1,28 @@
-import readlineSync from 'readline-sync';
-import greetUser, { getRandomOperator, getRandomInt } from '../index.js';
+import { getRandomOperator, getRandomInt } from '../math.js';
 
-const brainCalcGame = () => {
-  const userName = greetUser();
-  console.log('What is the result of the expression?');
+const gameTask = 'What is the result of the expression?';
 
-  let isCorrect = false;
-  let correctAnswerCount = 0;
+const runBrainCalc = () => {
+  const randomInt1 = getRandomInt();
+  const randomInt2 = getRandomInt();
+  const randomOperator = getRandomOperator();
 
-  do {
-    const randomInt1 = getRandomInt();
-    const randomInt2 = getRandomInt();
-    const randomOperator = getRandomOperator();
-    const getValue = () => {
-      switch (randomOperator) {
-        case '+':
-          return randomInt1 + randomInt2;
-        case '-':
-          return randomInt1 - randomInt2;
-        default:
-          return randomInt1 * randomInt2;
-      }
-    };
-
-    const expression = `${randomInt1} ${randomOperator} ${randomInt2}`;
-    const expValue = getValue();
-    console.log(`Question: ${expression}`);
-    const userInput = readlineSync.questionInt('Your answer: ');
-    const isCorrectAnswer = (userInput === expValue);
-    if (isCorrectAnswer) {
-      console.log('Correct!');
-      isCorrect = true;
-      correctAnswerCount += 1;
-    } else {
-      console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${expValue}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
+  const getValue = () => {
+    switch (randomOperator) {
+      case '+':
+        return randomInt1 + randomInt2;
+      case '-':
+        return randomInt1 - randomInt2;
+      default:
+        return randomInt1 * randomInt2;
     }
-  } while (isCorrect && correctAnswerCount < 3);
+  };
+  const gameQuestion = `${randomInt1} ${randomOperator} ${randomInt2}`;
+  const rightAnswer = getValue();
 
-  if (correctAnswerCount === 3) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  const result = [gameQuestion, `${rightAnswer}`];
+
+  return result;
 };
 
-export default brainCalcGame;
+export { gameTask, runBrainCalc };

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import brainPrimeGame from '../src/games/brain-prime-logic.js';
+import { gameTask, runBrainPrime } from '../src/games/brain-prime-logic.js';
+import engine from '../src/engine.js';
 
-brainPrimeGame();
+engine(gameTask, runBrainPrime);
