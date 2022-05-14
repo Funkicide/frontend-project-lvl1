@@ -1,37 +1,24 @@
 import readlineSync from 'readline-sync';
-import greetUser, { getRandomInt } from '../src/index.js';
+import greetUser, { getRandomInt } from '../index.js';
 
-const brainPrimeGame = () => {
+const brainEvenGame = () => {
   const userName = greetUser();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   let isCorrect = false;
   let correctAnswerCount = 0;
 
-  const isPrime = (number) => {
-    if (number < 2) {
-      return false;
-    }
-
-    for (let i = 2; i <= number / 2; i += 1) {
-      if (number % i === 0) {
-        return false;
-      }
-    }
-
-    return true;
-  };
-
   do {
-    const randomInt = getRandomInt();
-    console.log(`Question: ${randomInt}`);
+    const RandomInt = getRandomInt();
+    const isEven = RandomInt % 2 === 0;
+    console.log(`Question: ${RandomInt}`);
     const userInput = readlineSync.question('Your answer: ', {
       limit: ['yes', 'no'],
       limitMessage: `${userName}, answer "yes" or "no", please.`,
     });
     const isYes = (userInput === 'yes' || userInput === 'Yes');
-    const isCorrectAnswer = (isYes === isPrime(randomInt));
-    const rightAnswer = (isPrime(randomInt) ? 'yes' : 'no');
+    const isCorrectAnswer = (isYes === isEven);
+    const rightAnswer = (isEven ? 'yes' : 'no');
     if (isCorrectAnswer) {
       console.log('Correct!');
       isCorrect = true;
@@ -48,4 +35,4 @@ const brainPrimeGame = () => {
   }
 };
 
-export default brainPrimeGame;
+export default brainEvenGame;

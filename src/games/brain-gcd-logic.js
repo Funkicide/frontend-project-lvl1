@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greetUser, { getRandomInt } from '../src/index.js';
+import greetUser, { getRandomInt } from '../index.js';
 
 const brainGcdGame = () => {
   const userName = greetUser();

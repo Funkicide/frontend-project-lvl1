@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greetUser, { getRandomOperator, getRandomInt } from '../src/index.js';
+import greetUser, { getRandomOperator, getRandomInt } from '../index.js';
 
 const brainCalcGame = () => {
   const userName = greetUser();
