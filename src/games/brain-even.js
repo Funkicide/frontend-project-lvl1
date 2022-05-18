@@ -1,4 +1,4 @@
-import { getRandomInt } from '../math.js';
+import getRandomInt from '../math.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 
