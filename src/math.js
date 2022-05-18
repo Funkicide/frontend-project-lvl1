@@ -1,4 +1,4 @@
-const getRandomInt = () => Math.round(Math.random() * (20 - 0) + 0);
+const getRandomInt = (base = 20) => Math.round(Math.random() * base);
 
 const getRandomOperator = () => {
   const randomInt = Math.round(Math.random() * (2 - 0) + 0);
