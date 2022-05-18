@@ -14,7 +14,7 @@ const getRandomStep = () => {
   }
 };
 
-const getRandomProgression = () => {
+const runBrainProgression = () => {
   const randomInt = getRandomInt();
   const progressionStep = getRandomStep();
   const hiddenIndex = getRandomInt(9);
@@ -26,15 +26,7 @@ const getRandomProgression = () => {
 
   const rightAnswer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
-  const progressionWithHiddenElement = progression.join(' ');
-  const result = [rightAnswer, progressionWithHiddenElement];
-
-  return result;
-};
-
-const runBrainProgression = () => {
-  const [rightAnswer, progressionWithHiddenElement] = getRandomProgression();
-  const gameQuestion = `${progressionWithHiddenElement}`;
+  const gameQuestion = `${progression.join(' ')}`;
   const result = [gameQuestion, `${rightAnswer}`];
 
   return result;
