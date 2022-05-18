@@ -1,6 +1,12 @@
-import { getRandomOperator, getRandomInt } from '../math.js';
+import getRandomInt from '../math.js';
 
 const gameTask = 'What is the result of the expression?';
+
+const getRandomOperator = () => {
+  const randomInt = getRandomInt(2);
+  const operators = ['+', '-', '*'];
+  return operators[randomInt];
+};
 
 const runBrainCalc = () => {
   const randomInt1 = getRandomInt();
