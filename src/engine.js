@@ -14,14 +14,13 @@ const engine = (gameTask, game) => {
     console.log(`Question: ${gameQuestion}`);
     const userInput = readlineSync.question('Your answer: ');
 
-    if (rightAnswer === userInput) {
-      console.log('Correct!');
-      correctAnswerCount += 1;
-    } else {
+    if (rightAnswer !== userInput) {
       console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
+    console.log('Correct!');
+    correctAnswerCount += 1;
   } while (correctAnswerCount < 3);
 
   if (correctAnswerCount === 3) {
