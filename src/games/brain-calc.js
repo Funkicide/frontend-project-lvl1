@@ -1,34 +1,20 @@
 import getRandomInt from '../math.js';
 
-const gameTask = 'What is the result of the expression?';
+const brainCalcTask = 'What is the result of the expression?';
 
-const getRandomOperator = () => {
-  const randomInt = getRandomInt(2);
-  const operators = ['+', '-', '*'];
-  return operators[randomInt];
-};
+const generateBrainCalc = () => {
+  const firstInt = getRandomInt();
+  const secondInt = getRandomInt();
+  const indexOfExpression = getRandomInt(2);
 
-const runBrainCalc = () => {
-  const randomInt1 = getRandomInt();
-  const randomInt2 = getRandomInt();
-  const randomOperator = getRandomOperator();
-
-  const getValue = () => {
-    switch (randomOperator) {
-      case '+':
-        return randomInt1 + randomInt2;
-      case '-':
-        return randomInt1 - randomInt2;
-      default:
-        return randomInt1 * randomInt2;
-    }
-  };
-  const gameQuestion = `${randomInt1} ${randomOperator} ${randomInt2}`;
-  const rightAnswer = getValue();
+  const gameQuestions = [`${firstInt} + ${secondInt}`, `${firstInt} - ${secondInt}`, `${firstInt} * ${secondInt}`];
+  const rightAnswers = [firstInt + secondInt, firstInt - secondInt, firstInt * secondInt];
+  const gameQuestion = gameQuestions[indexOfExpression];
+  const rightAnswer = rightAnswers[indexOfExpression];
 
   const result = [gameQuestion, `${rightAnswer}`];
 
   return result;
 };
 
-export { gameTask, runBrainCalc };
+export { brainCalcTask, generateBrainCalc };
