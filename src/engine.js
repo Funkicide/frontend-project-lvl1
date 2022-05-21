@@ -17,7 +17,7 @@ const engine = (gameTask, generateGame) => {
     if (rightAnswer !== userInput) {
       console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return;
     }
     console.log('Correct!');
   }
