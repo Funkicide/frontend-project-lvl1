@@ -1,6 +1,6 @@
 import getRandomInt from '../math.js';
 
-const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const brainPrimeTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -16,15 +16,15 @@ const isPrime = (number) => {
   return true;
 };
 
-const runBrainPrime = () => {
-  const randomInt = getRandomInt();
+const generateBrainPrime = () => {
+  const int = getRandomInt();
 
-  const gameQuestion = `${randomInt}`;
-  const rightAnswer = (isPrime(randomInt) ? 'yes' : 'no');
+  const gameQuestion = `${int}`;
+  const rightAnswer = (isPrime(int) ? 'yes' : 'no');
 
   const result = [gameQuestion, rightAnswer];
 
   return result;
 };
 
-export { gameTask, runBrainPrime };
+export { brainPrimeTask, generateBrainPrime };

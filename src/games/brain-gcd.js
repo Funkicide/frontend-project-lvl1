@@ -1,6 +1,6 @@
 import getRandomInt from '../math.js';
 
-const gameTask = 'Find the greatest common divisor of given numbers.';
+const brainGcdTask = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   if (!b) {
@@ -10,16 +10,16 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-const runBrainGcd = () => {
-  const randomInt1 = getRandomInt();
-  const randomInt2 = getRandomInt();
+const generateBrainGcd = () => {
+  const firstInt = getRandomInt();
+  const secondInt = getRandomInt();
 
-  const gameQuestion = `${randomInt1} ${randomInt2}`;
-  const rightAnswer = getGcd(randomInt1, randomInt2);
+  const gameQuestion = `${firstInt} ${secondInt}`;
+  const rightAnswer = getGcd(firstInt, secondInt);
 
   const result = [`${gameQuestion}`, `${rightAnswer}`];
 
   return result;
 };
 
-export { gameTask, runBrainGcd };
+export { brainGcdTask, generateBrainGcd };
