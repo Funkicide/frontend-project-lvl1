@@ -1,3 +1,3 @@
-const getRandomInt = (base = 20) => Math.round(Math.random() * base);
+const getRandomInt = (min = 0, max = 20) => Math.floor(Math.random() * (max - min + 1) + min);
 
 export default getRandomInt;
