@@ -14,7 +14,7 @@ const generateBrainProgression = () => {
 
   const rightAnswer = `${progression[indexOfHiddenStep]}`;
   progression[indexOfHiddenStep] = '..';
-  const gameQuestion = `${progression.join(' ')}`;
+  const gameQuestion = progression.join(' ');
   const result = [gameQuestion, rightAnswer];
 
   return result;
