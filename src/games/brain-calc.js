@@ -2,18 +2,18 @@ import getRandomInt from '../math.js';
 
 const brainCalcTask = 'What is the result of the expression?';
 
-const operators = ['+', '-', '*'];
-
 const generateBrainCalc = () => {
   const firstInt = getRandomInt();
   const secondInt = getRandomInt();
-  const operator = operators[getRandomInt(0, 2)];
 
   const operations = {
     '+': firstInt + secondInt,
     '-': firstInt - secondInt,
     '*': firstInt * secondInt,
   };
+
+  const operators = Object.keys(operations);
+  const operator = operators[getRandomInt(0, 2)];
 
   const gameQuestion = `${firstInt} ${operator} ${secondInt}`;
   const rightAnswer = `${operations[operator]}`;
