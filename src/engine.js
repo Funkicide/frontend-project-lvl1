@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
+import greetUser from './cli.js';
 
 const maxRoundCount = 3;
 
 const engine = (gameTask, generateGame) => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  const userName = greetUser();
 
   console.log(gameTask);
 
