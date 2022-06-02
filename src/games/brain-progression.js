@@ -2,22 +2,28 @@ import getRandomInt from '../math.js';
 
 const brainProgressionTask = 'What number is missing in the progression?';
 
-const generateBrainProgression = () => {
-  const progressionStart = getRandomInt();
-  const progressionStep = getRandomInt(1, 10);
-  const indexOfHiddenStep = getRandomInt(0, 9);
+const generateProgression = (start, step, maxLength = 10) => {
   const progression = [];
 
-  for (let i = progressionStart; progression.length < 10; i += progressionStep) {
+  for (let i = start; progression.length < maxLength; i += step) {
     progression.push(i);
   }
 
-  const rightAnswer = `${progression[indexOfHiddenStep]}`;
-  progression[indexOfHiddenStep] = '..';
-  const gameQuestion = progression.join(' ');
-  const result = [gameQuestion, rightAnswer];
+  return progression;
+};
 
-  return result;
+const generateBrainProgression = () => {
+  const start = getRandomInt();
+  const step = getRandomInt(1, 10);
+  const hiddenIndex = getRandomInt(0, 9);
+
+  const progression = generateProgression(start, step);
+
+  const rightAnswer = `${progression[hiddenIndex]}`;
+  progression[hiddenIndex] = '..';
+  const gameQuestion = progression.join(' ');
+
+  return [gameQuestion, rightAnswer];
 };
 
 export { brainProgressionTask, generateBrainProgression };
