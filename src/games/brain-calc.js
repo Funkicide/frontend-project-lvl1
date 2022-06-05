@@ -18,7 +18,7 @@ const generateBrainCalc = () => {
   const operation = operations[operator](firstInt, secondInt);
 
   const gameQuestion = `${firstInt} ${operator} ${secondInt}`;
-  const rightAnswer = `${operation}`;
+  const rightAnswer = String(operation);
 
   return [gameQuestion, rightAnswer];
 };

@@ -20,7 +20,7 @@ const isPrime = (number) => {
 const generateBrainPrime = () => {
   const int = getRandomInt();
 
-  const gameQuestion = `${int}`;
+  const gameQuestion = String(int);
   const rightAnswer = (isPrime(int) ? 'yes' : 'no');
 
   return [gameQuestion, rightAnswer];

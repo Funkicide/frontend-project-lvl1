@@ -8,7 +8,7 @@ const isEven = (int) => int % 2 === 0;
 const generateBrainEven = () => {
   const int = getRandomInt();
 
-  const gameQuestion = `${int}`;
+  const gameQuestion = String(int);
   const rightAnswer = (isEven(int) ? 'yes' : 'no');
 
   return [gameQuestion, rightAnswer];

@@ -16,7 +16,7 @@ const generateBrainGcd = () => {
   const secondInt = getRandomInt();
 
   const gameQuestion = `${firstInt} ${secondInt}`;
-  const rightAnswer = `${getGcd(firstInt, secondInt)}`;
+  const rightAnswer = String(getGcd(firstInt, secondInt));
 
   return [gameQuestion, rightAnswer];
 };

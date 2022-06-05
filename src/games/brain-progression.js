@@ -20,7 +20,7 @@ const generateBrainProgression = () => {
 
   const progression = generateProgression(start, step);
 
-  const rightAnswer = `${progression[hiddenIndex]}`;
+  const rightAnswer = String(progression[hiddenIndex]);
   progression[hiddenIndex] = '..';
   const gameQuestion = progression.join(' ');
 
