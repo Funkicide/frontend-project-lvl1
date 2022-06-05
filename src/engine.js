@@ -8,7 +8,7 @@ const engine = (gameTask, generateGame) => {
 
   console.log(gameTask);
 
-  for (let i = 0; i <= roundsCount; i += 1) {
+  for (let i = 1; i <= roundsCount; i += 1) {
     const [gameQuestion, rightAnswer] = generateGame();
     console.log(`Question: ${gameQuestion}`);
     const userInput = readlineSync.question('Your answer: ');
