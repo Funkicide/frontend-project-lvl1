@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
-const maxRoundCount = 3;
+const roundsCount = 3;
 
 const engine = (gameTask, generateGame) => {
   const userName = greetUser();
 
   console.log(gameTask);
 
-  for (let i = 0; i < maxRoundCount; i += 1) {
+  for (let i = 0; i <= roundsCount; i += 1) {
     const [gameQuestion, rightAnswer] = generateGame();
     console.log(`Question: ${gameQuestion}`);
     const userInput = readlineSync.question('Your answer: ');
