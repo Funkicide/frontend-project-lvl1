@@ -1,3 +1,4 @@
+import engine from '../engine.js';
 import getRandomInt from '../math.js';
 
 const brainProgressionTask = 'What number is missing in the progression?';
@@ -26,4 +27,6 @@ const generateBrainProgression = () => {
   return [gameQuestion, rightAnswer];
 };
 
-export { brainProgressionTask, generateBrainProgression };
+const runBrainProgression = () => engine(brainProgressionTask, generateBrainProgression);
+
+export default runBrainProgression;

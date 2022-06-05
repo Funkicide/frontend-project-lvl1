@@ -1,3 +1,4 @@
+import engine from '../engine.js';
 import getRandomInt from '../math.js';
 
 const brainPrimeTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -22,9 +23,9 @@ const generateBrainPrime = () => {
   const gameQuestion = `${int}`;
   const rightAnswer = (isPrime(int) ? 'yes' : 'no');
 
-  const result = [gameQuestion, rightAnswer];
-
-  return result;
+  return [gameQuestion, rightAnswer];
 };
 
-export { brainPrimeTask, generateBrainPrime };
+const runBrainPrime = () => engine(brainPrimeTask, generateBrainPrime);
+
+export default runBrainPrime;

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { brainProgressionTask, generateBrainProgression } from '../src/games/brain-progression.js';
-import engine from '../src/engine.js';
+import runBrainProgression from '../src/games/brain-progression.js';
 
-engine(brainProgressionTask, generateBrainProgression);
+runBrainProgression();

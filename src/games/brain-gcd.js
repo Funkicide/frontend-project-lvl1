@@ -1,3 +1,4 @@
+import engine from '../engine.js';
 import getRandomInt from '../math.js';
 
 const brainGcdTask = 'Find the greatest common divisor of given numbers.';
@@ -17,9 +18,9 @@ const generateBrainGcd = () => {
   const gameQuestion = `${firstInt} ${secondInt}`;
   const rightAnswer = `${getGcd(firstInt, secondInt)}`;
 
-  const result = [gameQuestion, rightAnswer];
-
-  return result;
+  return [gameQuestion, rightAnswer];
 };
 
-export { brainGcdTask, generateBrainGcd };
+const runBrainGcd = () => engine(brainGcdTask, generateBrainGcd);
+
+export default runBrainGcd;

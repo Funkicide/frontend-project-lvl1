@@ -1,3 +1,4 @@
+import engine from '../engine.js';
 import getRandomInt from '../math.js';
 
 const brainCalcTask = 'What is the result of the expression?';
@@ -19,9 +20,9 @@ const generateBrainCalc = () => {
   const gameQuestion = `${firstInt} ${operator} ${secondInt}`;
   const rightAnswer = `${operation}`;
 
-  const result = [gameQuestion, rightAnswer];
-
-  return result;
+  return [gameQuestion, rightAnswer];
 };
 
-export { brainCalcTask, generateBrainCalc };
+const runBrainCalc = () => engine(brainCalcTask, generateBrainCalc);
+
+export default runBrainCalc;
