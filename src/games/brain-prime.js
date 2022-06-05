@@ -18,10 +18,10 @@ const isPrime = (number) => {
 };
 
 const generateRound = () => {
-  const int = getRandomInt();
+  const randomInteger = getRandomInt();
 
-  const question = String(int);
-  const answer = (isPrime(int) ? 'yes' : 'no');
+  const question = String(randomInteger);
+  const answer = (isPrime(randomInteger) ? 'yes' : 'no');
 
   return [question, answer];
 };

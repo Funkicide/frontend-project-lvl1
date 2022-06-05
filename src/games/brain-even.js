@@ -6,10 +6,10 @@ const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (int) => int % 2 === 0;
 
 const generateRound = () => {
-  const int = getRandomInt();
+  const randomInteger = getRandomInt();
 
-  const question = String(int);
-  const answer = (isEven(int) ? 'yes' : 'no');
+  const question = String(randomInteger);
+  const answer = (isEven(randomInteger) ? 'yes' : 'no');
 
   return [question, answer];
 };

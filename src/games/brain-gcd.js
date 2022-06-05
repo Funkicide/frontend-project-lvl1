@@ -12,11 +12,11 @@ const getGcd = (a, b) => {
 };
 
 const generateRound = () => {
-  const firstInt = getRandomInt();
-  const secondInt = getRandomInt();
+  const operand1 = getRandomInt();
+  const operand2 = getRandomInt();
 
-  const question = `${firstInt} ${secondInt}`;
-  const answer = String(getGcd(firstInt, secondInt));
+  const question = `${operand1} ${operand2}`;
+  const answer = String(getGcd(operand1, operand2));
 
   return [question, answer];
 };
