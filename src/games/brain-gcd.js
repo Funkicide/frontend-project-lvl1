@@ -1,7 +1,7 @@
 import engine from '../engine.js';
 import getRandomInt from '../utils.js';
 
-const brainGcdTask = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   if (!b) {
@@ -11,16 +11,16 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-const generateBrainGcd = () => {
+const generateRound = () => {
   const firstInt = getRandomInt();
   const secondInt = getRandomInt();
 
-  const gameQuestion = `${firstInt} ${secondInt}`;
-  const rightAnswer = String(getGcd(firstInt, secondInt));
+  const question = `${firstInt} ${secondInt}`;
+  const answer = String(getGcd(firstInt, secondInt));
 
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-const runBrainGcd = () => engine(brainGcdTask, generateBrainGcd);
+const runBrainGcd = () => engine(task, generateRound);
 
 export default runBrainGcd;

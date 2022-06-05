@@ -1,7 +1,7 @@
 import engine from '../engine.js';
 import getRandomInt from '../utils.js';
 
-const brainCalcTask = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 
 const operations = {
   '+': (a, b) => a + b,
@@ -9,7 +9,7 @@ const operations = {
   '*': (a, b) => a * b,
 };
 
-const generateBrainCalc = () => {
+const generateRound = () => {
   const firstInt = getRandomInt();
   const secondInt = getRandomInt();
 
@@ -17,12 +17,12 @@ const generateBrainCalc = () => {
   const operator = operators[getRandomInt(0, 2)];
   const operation = operations[operator](firstInt, secondInt);
 
-  const gameQuestion = `${firstInt} ${operator} ${secondInt}`;
-  const rightAnswer = String(operation);
+  const question = `${firstInt} ${operator} ${secondInt}`;
+  const answer = String(operation);
 
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-const runBrainCalc = () => engine(brainCalcTask, generateBrainCalc);
+const runBrainCalc = () => engine(task, generateRound);
 
 export default runBrainCalc;

@@ -3,18 +3,18 @@ import greetUser from './cli.js';
 
 const roundsCount = 3;
 
-const engine = (gameTask, generateGame) => {
+const engine = (gameTask, generateRound) => {
   const userName = greetUser();
 
   console.log(gameTask);
 
   for (let i = 1; i <= roundsCount; i += 1) {
-    const [gameQuestion, rightAnswer] = generateGame();
+    const [gameQuestion, rightAnswer] = generateRound();
     console.log(`Question: ${gameQuestion}`);
-    const userInput = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (rightAnswer !== userInput) {
-      console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+    if (rightAnswer !== userAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }

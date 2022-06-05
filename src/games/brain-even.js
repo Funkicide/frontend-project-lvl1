@@ -1,19 +1,19 @@
 import engine from '../engine.js';
 import getRandomInt from '../utils.js';
 
-const brainEvenTask = 'Answer "yes" if the number is even, otherwise answer "no".';
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (int) => int % 2 === 0;
 
-const generateBrainEven = () => {
+const generateRound = () => {
   const int = getRandomInt();
 
-  const gameQuestion = String(int);
-  const rightAnswer = (isEven(int) ? 'yes' : 'no');
+  const question = String(int);
+  const answer = (isEven(int) ? 'yes' : 'no');
 
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-const runBrainEven = () => engine(brainEvenTask, generateBrainEven);
+const runBrainEven = () => engine(task, generateRound);
 
 export default runBrainEven;

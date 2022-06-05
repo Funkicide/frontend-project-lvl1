@@ -1,7 +1,7 @@
 import engine from '../engine.js';
 import getRandomInt from '../utils.js';
 
-const brainPrimeTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -17,15 +17,15 @@ const isPrime = (number) => {
   return true;
 };
 
-const generateBrainPrime = () => {
+const generateRound = () => {
   const int = getRandomInt();
 
-  const gameQuestion = String(int);
-  const rightAnswer = (isPrime(int) ? 'yes' : 'no');
+  const question = String(int);
+  const answer = (isPrime(int) ? 'yes' : 'no');
 
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-const runBrainPrime = () => engine(brainPrimeTask, generateBrainPrime);
+const runBrainPrime = () => engine(task, generateRound);
 
 export default runBrainPrime;
