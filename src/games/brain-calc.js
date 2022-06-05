@@ -1,5 +1,5 @@
 import engine from '../engine.js';
-import getRandomInt from '../math.js';
+import getRandomInt from '../utils.js';
 
 const brainCalcTask = 'What is the result of the expression?';
 

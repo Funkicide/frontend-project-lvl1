@@ -1,5 +1,5 @@
 import engine from '../engine.js';
-import getRandomInt from '../math.js';
+import getRandomInt from '../utils.js';
 
 const brainProgressionTask = 'What number is missing in the progression?';
 

@@ -1,5 +1,5 @@
 import engine from '../engine.js';
-import getRandomInt from '../math.js';
+import getRandomInt from '../utils.js';
 
 const brainPrimeTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

@@ -1,5 +1,5 @@
 import engine from '../engine.js';
-import getRandomInt from '../math.js';
+import getRandomInt from '../utils.js';
 
 const brainEvenTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 

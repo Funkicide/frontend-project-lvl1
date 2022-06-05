@@ -1,5 +1,5 @@
 import engine from '../engine.js';
-import getRandomInt from '../math.js';
+import getRandomInt from '../utils.js';
 
 const brainGcdTask = 'Find the greatest common divisor of given numbers.';
 
