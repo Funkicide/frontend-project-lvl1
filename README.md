@@ -1,16 +1,18 @@
-### Codeclimate Maintainability badge:
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-### Linter check status:
+# :game_die: Brain Games
+ 
 ![Lint-check](https://github.com/Funkicide/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
+[![Actions Status](https://github.com/Funkicide/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Funkicide/frontend-project-lvl1/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/17b4bfc66aa62c56d554/maintainability)](https://codeclimate.com/github/Funkicide/frontend-project-lvl1/maintainability)
 
-# Brain games app
-App consists of five logic based console games:
+## What is Brain Games?
+Brain Games consists of five math based cli games.
+To win, you need to give 3 correct answers in a row. You lose if give wrong answer.
 
-* Brain Even
-* Brain Calc
-* Brain Gcd
-* Brain Progression
-* Brain Prime
+* Brain Even - you need to tell whether the given number is even of not.
+* Brain Calc - you need to calculate and provide the result of the simple math expression.
+* Brain Gcd - you need to find the greatest common divisor of two given numbers.
+* Brain Progression - you need to find the missing number of the progression.
+* Brain Prime - you need to tell whether the given number is prime or not.
 
 ## System requirements
 
@@ -24,25 +26,36 @@ App consists of five logic based console games:
 make install
 ```
 
-## Using
-
+## Usage
+#### Brain-even
 ```sh
 make brain-even
+```
+#### Brain-calc
+```sh
 make brain-calc
+```
+#### Brain-gcd
+```sh
 make brain-gcd
+```
+#### Brain-progression
+```sh
 make brain-progression
+```
+#### Brain-prime
+```sh
 make brain-prime
 ```
 
-### Brain-even game demo: 
+## Game demos:
+#### Brain-even: 
 https://asciinema.org/a/IlqsoCzlCP8DZOn17UyVfgQsE
-### Brain-calc game demo:
+#### Brain-calc:
 https://asciinema.org/a/AbqLgmOxQAq8rUCLolvBHd65G
-### Brain-gcd game demo:
+#### Brain-gcd:
 https://asciinema.org/a/i36CJigBr3sYc7zzPwd9TB49P
-### Brain-progression game demo:
+#### Brain-progression:
 https://asciinema.org/a/8VtDSAG9kzqpXjaFEVu87BjEG
-### Brain-prime game demo:
+#### Brain-prime:
 https://asciinema.org/a/epvabOwADpBXB3cHmo4jhX1Bm
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Funkicide/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Funkicide/frontend-project-lvl1/actions)
