@@ -1,4 +1,4 @@
-import engine from '../engine.js';
+import generateGame from '../engine.js';
 import getRandomInt from '../utils.js';
 
 const task = 'What is the result of the expression?';
@@ -23,6 +23,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const runBrainCalc = () => engine(task, generateRound);
+const runBrainCalc = () => generateGame(task, generateRound);
 
 export default runBrainCalc;

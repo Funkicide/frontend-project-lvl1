@@ -3,7 +3,7 @@ import greetUser from './cli.js';
 
 const roundsCount = 3;
 
-const engine = (gameTask, generateRound) => {
+const generateGame = (gameTask, generateRound) => {
   const userName = greetUser();
 
   console.log(gameTask);
@@ -24,4 +24,4 @@ const engine = (gameTask, generateRound) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default engine;
+export default generateGame;

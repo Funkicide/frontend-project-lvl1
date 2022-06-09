@@ -1,4 +1,4 @@
-import engine from '../engine.js';
+import generateGame from '../engine.js';
 import getRandomInt from '../utils.js';
 
 const task = 'What number is missing in the progression?';
@@ -27,6 +27,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const runBrainProgression = () => engine(task, generateRound);
+const runBrainProgression = () => generateGame(task, generateRound);
 
 export default runBrainProgression;

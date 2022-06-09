@@ -1,4 +1,4 @@
-import engine from '../engine.js';
+import generateGame from '../engine.js';
 import getRandomInt from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
@@ -21,6 +21,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const runBrainGcd = () => engine(task, generateRound);
+const runBrainGcd = () => generateGame(task, generateRound);
 
 export default runBrainGcd;

@@ -1,4 +1,4 @@
-import engine from '../engine.js';
+import generateGame from '../engine.js';
 import getRandomInt from '../utils.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -12,6 +12,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const runBrainEven = () => engine(task, generateRound);
+const runBrainEven = () => generateGame(task, generateRound);
 
 export default runBrainEven;
