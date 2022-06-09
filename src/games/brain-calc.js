@@ -15,10 +15,10 @@ const generateRound = () => {
 
   const operators = Object.keys(operations);
   const operator = operators[getRandomInt(0, 2)];
-  const operation = operations[operator](operand1, operand2);
+  const operationResult = operations[operator](operand1, operand2);
 
   const question = `${operand1} ${operator} ${operand2}`;
-  const answer = String(operation);
+  const answer = String(operationResult);
 
   return [question, answer];
 };
